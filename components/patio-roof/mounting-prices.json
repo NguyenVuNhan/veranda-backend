@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_patio_roof_mounting_prices",
+  "info": {
+    "name": "Mounting Prices",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "side_left": {
+      "type": "component",
+      "repeatable": false,
+      "component": "patio-roof.side-item-price",
+      "required": true
+    },
+    "side_right": {
+      "type": "component",
+      "repeatable": false,
+      "component": "patio-roof.side-item-price",
+      "required": true
+    }
+  }
+}

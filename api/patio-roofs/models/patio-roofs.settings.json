@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patio_roofs",
+  "info": {
+    "name": "Patio Roofs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "with_mounting_prices": {
+      "type": "component",
+      "repeatable": false,
+      "component": "patio-roof.mounting-prices",
+      "required": true
+    },
+    "without_mounting_prices": {
+      "type": "component",
+      "repeatable": false,
+      "component": "patio-roof.mounting-prices",
+      "required": true
+    },
+    "with_spot_price": {
+      "type": "float",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "price": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "discount": {
+      "type": "float",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    "sold": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "estimate_shipping_from": {
+      "type": "date",
+      "required": true
+    },
+    "estimate_shipping_to": {
+      "type": "date",
+      "required": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "pictures": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "meta_title": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z0-9-_]+(?:- [a-z0-9-_]+)*$",
+      "unique": true
+    }
+  }
+}

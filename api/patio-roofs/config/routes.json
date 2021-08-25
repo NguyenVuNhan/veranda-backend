@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/patio-roofs",
+      "handler": "patio-roofs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/patio-roofs/count",
+      "handler": "patio-roofs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/patio-roofs/:id",
+      "handler": "patio-roofs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/patio-roofs",
+      "handler": "patio-roofs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/patio-roofs/:id",
+      "handler": "patio-roofs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/patio-roofs/:id",
+      "handler": "patio-roofs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

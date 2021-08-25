@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/assets",
+      "handler": "assets.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/assets",
+      "handler": "assets.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/assets",
+      "handler": "assets.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

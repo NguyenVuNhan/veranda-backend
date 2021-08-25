@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_patio_roof_side_item_prices",
+  "info": {
+    "name": "side_item_price",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "open": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "spie": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "polycarbonaat_wand": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "sandwichpanelen": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "sandwichpanelen_en_spie": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    }
+  }
+}

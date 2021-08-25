@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "meta_information",
+  "info": {
+    "name": "Meta Information",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "mobile_phone": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    }
+  }
+}
