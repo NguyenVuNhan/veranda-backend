@@ -84,6 +84,7 @@ nbproject
 public/uploads/*
 !public/uploads/.gitkeep
 .git
+.vim
 
 ############################
 # Node.js
