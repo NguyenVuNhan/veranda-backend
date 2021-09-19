@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/return-policy": {
+    "/term-and-condition": {
       "get": {
         "deprecated": false,
-        "description": "Find all the return-policy's records",
+        "description": "Find all the term-and-condition's records",
         "responses": {
           "200": {
-            "description": "Retrieve return-policy document(s)",
+            "description": "Retrieve term-and-condition document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Return-policy"
+          "Term-and-condition"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single return-policy record",
+        "description": "Update a single term-and-condition record",
         "responses": {
           "200": {
-            "description": "Retrieve return-policy document(s)",
+            "description": "Retrieve term-and-condition document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Return-policy"
+          "Term-and-condition"
         ],
         "requestBody": {
           "description": "",
@@ -252,7 +252,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReturn-policy"
+                "$ref": "#/components/schemas/NewTerm-and-condition"
               }
             }
           }
@@ -261,10 +261,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single return-policy record",
+        "description": "Delete a single term-and-condition record",
         "responses": {
           "200": {
-            "description": "deletes a single return-policy based on the ID supplied",
+            "description": "deletes a single term-and-condition based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,7 +307,7 @@
         },
         "summary": "",
         "tags": [
-          "Return-policy"
+          "Term-and-condition"
         ],
         "parameters": []
       }
@@ -315,7 +315,7 @@
   },
   "components": {
     "schemas": {
-      "Return-policy": {
+      "Term-and-condition": {
         "required": [
           "id"
         ],
@@ -362,7 +362,7 @@
           }
         }
       },
-      "NewReturn-policy": {
+      "NewTerm-and-condition": {
         "properties": {
           "data": {
             "type": "string"

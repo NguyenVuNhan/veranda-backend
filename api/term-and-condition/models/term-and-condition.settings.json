@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "return_policies",
+  "collectionName": "term_and_conditions",
   "info": {
-    "name": "Return Policy",
+    "name": "Term And Condition",
     "description": ""
   },
   "options": {

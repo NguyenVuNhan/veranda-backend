@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "return_policies",
+  "collectionName": "warranty_and_complaints",
   "info": {
-    "name": "Return Policy",
-    "description": ""
+    "name": "Warranty And Complaints"
   },
   "options": {
     "increments": true,

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/warranty-and-complaints",
+      "handler": "warranty-and-complaints.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/warranty-and-complaints",
+      "handler": "warranty-and-complaints.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/warranty-and-complaints",
+      "handler": "warranty-and-complaints.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
