@@ -28,10 +28,11 @@
       "type": "float",
       "required": true
     },
-    "name": {
+    "title": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "default": "60"
     },
     "price": {
       "type": "float",
@@ -77,11 +78,10 @@
       "required": true,
       "pluginOptions": {}
     },
-    "meta_title": {
-      "type": "string",
-      "required": true,
-      "regex": "^[a-z0-9-_]+(?:- [a-z0-9-_]+)*$",
-      "unique": true
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }

@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/assets": {
+    "/contact-info": {
       "get": {
         "deprecated": false,
-        "description": "Find all the assets's records",
+        "description": "Find all the contact-info's records",
         "responses": {
           "200": {
-            "description": "Retrieve assets document(s)",
+            "description": "Retrieve contact-info document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Assets"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Assets"
+          "Contact-info"
         ],
         "parameters": [
           {
@@ -194,14 +195,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single assets record",
+        "description": "Update a single contact-info record",
         "responses": {
           "200": {
-            "description": "Retrieve assets document(s)",
+            "description": "Retrieve contact-info document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Assets"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -239,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Assets"
+          "Contact-info"
         ],
         "requestBody": {
           "description": "",
@@ -247,7 +252,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAssets"
+                "$ref": "#/components/schemas/NewContact-info"
               }
             }
           }
@@ -256,10 +261,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single assets record",
+        "description": "Delete a single contact-info record",
         "responses": {
           "200": {
-            "description": "deletes a single assets based on the ID supplied",
+            "description": "deletes a single contact-info based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -302,7 +307,7 @@
         },
         "summary": "",
         "tags": [
-          "Assets"
+          "Contact-info"
         ],
         "parameters": []
       }
@@ -310,92 +315,133 @@
   },
   "components": {
     "schemas": {
-      "Assets": {
+      "Contact-info": {
         "required": [
-          "id"
+          "id",
+          "details_address",
+          "phone_number",
+          "email",
+          "company_name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "logo": {
+          "details_address": {
+            "type": "object",
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "address",
+              "zip_code",
+              "city",
+              "country"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "address": {
                 "type": "string"
               },
-              "alternativeText": {
+              "zip_code": {
                 "type": "string"
               },
-              "caption": {
+              "city": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
+              "country": {
                 "type": "string"
               }
             }
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "phone_number": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "social_media": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "facebook": {
+                "type": "string"
+              },
+              "instagram": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewAssets": {
+      "NewContact-info": {
+        "required": [
+          "details_address",
+          "phone_number",
+          "email",
+          "company_name"
+        ],
         "properties": {
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "details_address": {
+            "type": "object",
+            "required": [
+              "id",
+              "address",
+              "zip_code",
+              "city",
+              "country"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "zip_code": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              }
+            }
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "social_media": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "facebook": {
+                "type": "string"
+              },
+              "instagram": {
+                "type": "string"
+              }
+            }
           },
           "created_by": {
             "type": "string"
@@ -407,9 +453,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Assets"
-    }
-  ]
+  "tags": []
 }

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_info_addresses",
+  "info": {
+    "name": "Address",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "zip_code": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\d{4}([-]|\\s*)?([A-Z]{2})?$"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

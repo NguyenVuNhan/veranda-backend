@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_infos",
+  "info": {
+    "name": "Contact Info",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details_address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "info.address",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true,
+      "regex": "^[\\+]?[(]?[0-9]{2}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$",
+      "unique": false
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z0-9](\\.?[a-z0-9]){4,}@[a-z0-9]+\\.[a-z0-9]{2,4}$"
+    },
+    "company_name": {
+      "type": "string",
+      "required": true
+    },
+    "social_media": {
+      "type": "component",
+      "repeatable": false,
+      "component": "info.social-media",
+      "required": false
+    }
+  }
+}

@@ -533,13 +533,13 @@
           "with_mounting_prices",
           "without_mounting_prices",
           "with_spot_price",
-          "name",
+          "title",
           "price",
           "estimate_shipping_from",
           "estimate_shipping_to",
           "thumbnail",
           "pictures",
-          "meta_title"
+          "slug"
         ],
         "properties": {
           "id": {
@@ -698,8 +698,9 @@
           "with_spot_price": {
             "type": "number"
           },
-          "name": {
-            "type": "string"
+          "title": {
+            "type": "string",
+            "default": "60"
           },
           "price": {
             "type": "number"
@@ -857,8 +858,8 @@
               }
             }
           },
-          "meta_title": {
-            "type": "string"
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -871,11 +872,11 @@
           "with_mounting_prices",
           "without_mounting_prices",
           "with_spot_price",
-          "name",
+          "title",
           "price",
           "estimate_shipping_from",
           "estimate_shipping_to",
-          "meta_title"
+          "slug"
         ],
         "properties": {
           "with_mounting_prices": {
@@ -1031,8 +1032,9 @@
           "with_spot_price": {
             "type": "number"
           },
-          "name": {
-            "type": "string"
+          "title": {
+            "type": "string",
+            "default": "60"
           },
           "price": {
             "type": "number"
@@ -1053,8 +1055,8 @@
             "type": "string",
             "format": "date"
           },
-          "meta_title": {
-            "type": "string"
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",

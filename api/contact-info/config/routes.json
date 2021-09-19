@@ -2,24 +2,24 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/assets",
-      "handler": "assets.find",
+      "path": "/contact-info",
+      "handler": "contact-info.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/assets",
-      "handler": "assets.update",
+      "path": "/contact-info",
+      "handler": "contact-info.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/assets",
-      "handler": "assets.delete",
+      "path": "/contact-info",
+      "handler": "contact-info.delete",
       "config": {
         "policies": []
       }
