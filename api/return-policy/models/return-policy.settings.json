@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "return_policies",
+  "info": {
+    "name": "Return Policy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "richtext"
+    }
+  }
+}

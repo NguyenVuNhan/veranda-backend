@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/return-policy",
+      "handler": "return-policy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/return-policy",
+      "handler": "return-policy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/return-policy",
+      "handler": "return-policy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
