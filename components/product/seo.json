@@ -1,26 +1,12 @@
 {
   "collectionName": "components_product_seos",
   "info": {
-    "name": "SEO",
+    "name": "SEO Config",
     "icon": "address-card",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "metaTitle": {
-      "type": "string",
-      "required": true,
-      "maxLength": 60
-    },
-    "metaDescription": {
-      "type": "string",
-      "maxLength": 155
-    },
-    "sharedImage": {
-      "type": "component",
-      "repeatable": false,
-      "component": "product.shared-image"
-    },
     "preventIndexing": {
       "type": "boolean",
       "default": false

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/garden-lightings",
+      "handler": "garden-lighting.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/garden-lightings/count",
+      "handler": "garden-lighting.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/garden-lightings/:id",
+      "handler": "garden-lighting.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/garden-lightings",
+      "handler": "garden-lighting.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/garden-lightings/:id",
+      "handler": "garden-lighting.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/garden-lightings/:id",
+      "handler": "garden-lighting.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

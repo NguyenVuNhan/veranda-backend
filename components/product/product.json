@@ -1,35 +1,22 @@
 {
   "collectionName": "components_common_products",
   "info": {
-    "name": "Product",
-    "icon": "cube"
+    "name": "Product Sale Info",
+    "icon": "cube",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "price": {
-      "type": "float",
-      "required": true
-    },
     "discount": {
       "type": "float",
       "default": 0,
       "min": 0,
       "max": 100
     },
-    "sold": {
+    "stock": {
       "type": "integer",
-      "default": 0
-    },
-    "estimate_shipping_from": {
-      "type": "date"
-    },
-    "estimate_shipping_to": {
-      "type": "date"
+      "default": 0,
+      "min": 0
     },
     "thumbnail": {
       "model": "file",
@@ -50,10 +37,6 @@
       "plugin": "upload",
       "required": true,
       "pluginOptions": {}
-    },
-    "meta_title": {
-      "type": "string",
-      "required": true
     }
   }
 }

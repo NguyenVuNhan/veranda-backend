@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/patio-roofs": {
+    "/garden-lightings": {
       "get": {
         "deprecated": false,
-        "description": "Find all the patio-roofs's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve patio-roofs document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Patio-roofs"
+          "Garden-lighting"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new patio-roofs record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve patio-roofs document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Patio-roofs"
+          "Garden-lighting"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPatio-roofs"
+                "$ref": "#/components/schemas/NewGarden-lighting"
               }
             }
           }
         }
       }
     },
-    "/patio-roofs/count": {
+    "/garden-lightings/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of patio-roofs documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve patio-roofs document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Patio-roofs"
+          "Garden-lighting"
         ],
         "parameters": []
       }
     },
-    "/patio-roofs/{id}": {
+    "/garden-lightings/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one patio-roofs record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve patio-roofs document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Patio-roofs"
+          "Garden-lighting"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single patio-roofs record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve patio-roofs document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Patio-roofs"
+          "Garden-lighting"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPatio-roofs"
+                "$ref": "#/components/schemas/NewGarden-lighting"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single patio-roofs record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single patio-roofs based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Patio-roofs"
+          "Garden-lighting"
         ],
         "parameters": [
           {
@@ -527,396 +527,253 @@
   },
   "components": {
     "schemas": {
-      "Patio-roofs": {
+      "Garden-lighting": {
         "required": [
           "id",
-          "with_mounting_prices",
-          "without_mounting_prices",
-          "with_spot_price",
           "title",
           "price",
-          "estimate_shipping_from",
-          "estimate_shipping_to",
-          "thumbnail",
-          "pictures"
+          "productSaleInfo"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "with_mounting_prices": {
-            "type": "object",
-            "required": [
-              "id",
-              "side_left",
-              "side_right"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "side_left": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              },
-              "side_right": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              }
-            }
-          },
-          "without_mounting_prices": {
-            "type": "object",
-            "required": [
-              "id",
-              "side_left",
-              "side_right"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "side_left": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              },
-              "side_right": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              }
-            }
-          },
-          "with_spot_price": {
-            "type": "number"
-          },
           "title": {
             "type": "string",
-            "default": "60"
+            "minLength": 5
+          },
+          "slug": {
+            "type": "uid"
           },
           "price": {
             "type": "number"
           },
-          "discount": {
-            "type": "number",
-            "default": 0
-          },
-          "sold": {
-            "type": "integer",
-            "default": 0
-          },
-          "estimate_shipping_from": {
-            "type": "string",
-            "format": "date"
-          },
-          "estimate_shipping_to": {
-            "type": "string",
-            "format": "date"
-          },
-          "thumbnail": {
+          "productSaleInfo": {
+            "type": "object",
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "thumbnail",
+              "pictures"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
+              "discount": {
+                "type": "number",
+                "default": 0
               },
-              "alternativeText": {
-                "type": "string"
+              "stock": {
+                "type": "integer",
+                "default": 0
               },
-              "caption": {
-                "type": "string"
+              "thumbnail": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
               },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "pictures": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
+              "pictures": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
           },
-          "slug": {
-            "type": "uid"
+          "productDescription": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "details": {
+                "type": "string"
+              },
+              "shippingAndReturn": {
+                "type": "string"
+              },
+              "showRoom": {
+                "type": "string"
+              }
+            }
+          },
+          "seoConfig": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "preventIndexing": {
+                "type": "boolean",
+                "default": false
+              },
+              "keywords": {
+                "type": "string"
+              }
+            }
           },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "with_mounting_prices",
-                "without_mounting_prices",
-                "with_spot_price",
                 "title",
                 "price",
-                "estimate_shipping_from",
-                "estimate_shipping_to",
-                "thumbnail",
-                "pictures"
+                "productSaleInfo"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "with_mounting_prices": {
-                  "type": "component"
-                },
-                "without_mounting_prices": {
-                  "type": "component"
-                },
-                "with_spot_price": {
-                  "type": "number"
-                },
                 "title": {
                   "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
                 },
                 "price": {
                   "type": "number"
                 },
-                "discount": {
-                  "type": "number"
+                "productSaleInfo": {
+                  "type": "component"
                 },
-                "sold": {
-                  "type": "integer"
+                "productDescription": {
+                  "type": "component"
                 },
-                "estimate_shipping_from": {
-                  "type": "string"
-                },
-                "estimate_shipping_to": {
-                  "type": "string"
-                },
-                "thumbnail": {
-                  "type": "string"
-                },
-                "pictures": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "slug": {
-                  "type": "uid"
+                "seoConfig": {
+                  "type": "component"
                 },
                 "localizations": {
                   "type": "array",
@@ -948,195 +805,218 @@
           }
         }
       },
-      "NewPatio-roofs": {
+      "NewGarden-lighting": {
         "required": [
-          "with_mounting_prices",
-          "without_mounting_prices",
-          "with_spot_price",
           "title",
           "price",
-          "estimate_shipping_from",
-          "estimate_shipping_to"
+          "productSaleInfo"
         ],
         "properties": {
-          "with_mounting_prices": {
-            "type": "object",
-            "required": [
-              "id",
-              "side_left",
-              "side_right"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "side_left": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              },
-              "side_right": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              }
-            }
-          },
-          "without_mounting_prices": {
-            "type": "object",
-            "required": [
-              "id",
-              "side_left",
-              "side_right"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "side_left": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              },
-              "side_right": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "open",
-                  "spie",
-                  "polycarbonaat_wand",
-                  "sandwichpanelen",
-                  "sandwichpanelen_en_spie"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "open": {
-                    "type": "number"
-                  },
-                  "spie": {
-                    "type": "number"
-                  },
-                  "polycarbonaat_wand": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen": {
-                    "type": "number"
-                  },
-                  "sandwichpanelen_en_spie": {
-                    "type": "number"
-                  }
-                }
-              }
-            }
-          },
-          "with_spot_price": {
-            "type": "number"
-          },
           "title": {
             "type": "string",
-            "default": "60"
+            "minLength": 5
+          },
+          "slug": {
+            "type": "uid"
           },
           "price": {
             "type": "number"
           },
-          "discount": {
-            "type": "number",
-            "default": 0
+          "productSaleInfo": {
+            "type": "object",
+            "required": [
+              "id",
+              "thumbnail",
+              "pictures"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "discount": {
+                "type": "number",
+                "default": 0
+              },
+              "stock": {
+                "type": "integer",
+                "default": 0
+              },
+              "thumbnail": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "pictures": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "sold": {
-            "type": "integer",
-            "default": 0
+          "productDescription": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "details": {
+                "type": "string"
+              },
+              "shippingAndReturn": {
+                "type": "string"
+              },
+              "showRoom": {
+                "type": "string"
+              }
+            }
           },
-          "estimate_shipping_from": {
-            "type": "string",
-            "format": "date"
-          },
-          "estimate_shipping_to": {
-            "type": "string",
-            "format": "date"
-          },
-          "slug": {
-            "type": "uid"
+          "seoConfig": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "preventIndexing": {
+                "type": "boolean",
+                "default": false
+              },
+              "keywords": {
+                "type": "string"
+              }
+            }
           },
           "localizations": {
             "type": "array",

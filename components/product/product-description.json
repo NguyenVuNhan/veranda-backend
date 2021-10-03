@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_product_product_descriptions",
+  "info": {
+    "name": "Product Description",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "details": {
+      "type": "richtext"
+    },
+    "shippingAndReturn": {
+      "type": "richtext",
+      "required": false,
+      "unique": false
+    },
+    "showRoom": {
+      "type": "richtext"
+    }
+  }
+}
