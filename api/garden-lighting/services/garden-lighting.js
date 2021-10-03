@@ -20,17 +20,23 @@ module.exports = {
             model: strapi.models["garden-lighting"],
         });
 
-        return sanitizedEntities.map(({ title, price, slug, productSaleInfo }) => {
-            const thumbnail = productSaleInfo.thumbnail;
-            return {
-                title,
-                price,
-                slug,
-                thumbnail: {
-                    url: thumbnail.formats.thumbnail.url,
-                    alt: thumbnail.alternativeText,
-                },
-            };
-        });
+        return sanitizedEntities.map(
+            ({ title, price, slug, productSaleInfo: { discount, thumbnail } }) => {
+                let url = thumbnail.formats.thumbnail.url;
+                console.log(strapi.config);
+                if (url.startsWith("/")) url = strapi.config.server.url + url;
+
+                return {
+                    title,
+                    price,
+                    slug,
+                    discount,
+                    thumbnail: {
+                        url,
+                        alt: thumbnail.alternativeText,
+                    },
+                };
+            }
+        );
     },
 };
