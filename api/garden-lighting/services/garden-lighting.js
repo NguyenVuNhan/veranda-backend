@@ -23,7 +23,6 @@ module.exports = {
         return sanitizedEntities.map(
             ({ title, price, slug, productSaleInfo: { discount, thumbnail } }) => {
                 let url = thumbnail.formats.thumbnail.url;
-                console.log(strapi.config);
                 if (url.startsWith("/")) url = strapi.config.server.url + url;
 
                 return {
